@@ -7,17 +7,7 @@ $ ./lc large_file.csv
 20973777 large_file.csv
 ```
 
-## Getting Started
-
-1. Create a large file of desired size using `make_large_file.py`
-
-```console
-$ python3 make_large_file.py
-$ du -sh large_file
-5.1G    large_file
-```
-
-2. Build linecount and run on large file
+## Build
 
 ```console
 $ make
