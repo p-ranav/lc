@@ -7,13 +7,13 @@ $ lc large_file.csv
 20973777 large_file.csv
 ```
 
-## Build
+## Build & Install
 
 ```console
 $ mkdir build && cd build
-$ cmake ..
-$ make
-$ sudo make install
+$ cmake .. && make && sudo make install
+
+
 $ lc some_large_file
 20973777 some_large_file
 ```
