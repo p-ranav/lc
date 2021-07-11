@@ -26,3 +26,4 @@ For large files, this line counter can be 5-10 times faster than `wc -l` dependi
 | 5 GB      | 20969987  | 1.160 s        | 200.5 ms      |
 | 25 GB     | 104839424 | 6.162 s        | 738.8 ms      |
 | 51 GB     | 209706969 | 13.117 s       | 1.461 s       | 
+| 100 GB    | 209706969 | 27.279 s       | 3.597 s       | 
