@@ -14,17 +14,15 @@ class LineCounter {
   std::vector<std::thread> threads;
 
   void count_lines_in_chunk(std::size_t chunk_index, std::size_t chunk_start, std::size_t chunk_end) {
-    std::size_t lines = 0;
+    std::size_t lines_in_chunk = 0;
     
     std::size_t index;
-    std::size_t last_newline_index;
     for (index = chunk_start; index < chunk_end; ++index) {
       if (file_mmap[index] == '\n') {
-	lines += 1;
-	last_newline_index = index;
+	lines_in_chunk += 1;
       }
     }
-    __lines__ += lines;
+    __lines__ += lines_in_chunk;
   }
 
 public:
@@ -39,7 +37,7 @@ public:
     if (error) {
       return __lines__;
     }
-    
+
     // schedule line counter for each chunk
     for (std::size_t i = 0; i < num_chunks; ++i) {
       std::size_t chunk_start = i * size_per_chunk;
@@ -72,4 +70,3 @@ int main(int argc, char * argv[])
   auto counter = LineCounter(argv[1]);
   std::cout << counter.count() << " " << argv[1] << "\n";
 }
-
