@@ -29,7 +29,9 @@ $ ./lc large_file
 
 For large files, this line counter can be 5-10 times faster than `wc -l` depending on compute resources.
 
-| File size | Lines     | `wc -l <file>`      | `./lc <file>`      |
-|-----------|-----------|---------------------|--------------------|
-| 1 GB      | 4192675   | 243.0 ms ±   0.8 ms | 60.9 ms ±   3.2 ms |
-| 51 GB     | 209706969 | 13.117 s ±  0.565 s | 1.461 s ±  0.104 s | 
+| File size | Lines     | `wc -l <file>`     | `./lc <file>`     |
+|----------:|----------:|-------------------:|------------------:|
+| 500 MB    | 2047277   | 116.8 ms ± 0.5 ms  | 34.5 ms ± 1.6 ms  |
+| 1 GB      | 4192675   | 243.0 ms ± 0.8 ms  | 60.9 ms ± 3.2 ms  |
+| 5 GB      | 20969987  | 1.160 s ± 0.008 s  | 200.5 ms ± 3.3 ms |
+| 51 GB     | 209706969 | 13.117 s ± 0.565 s | 1.461 s ± 0.104 s | 
