@@ -3,16 +3,19 @@
 This project provides a fast multi-threaded line counter. 
 
 ```console
-$ ./lc large_file.csv
+$ lc large_file.csv
 20973777 large_file.csv
 ```
 
 ## Build
 
 ```console
+$ mkdir build && cd build
+$ cmake ..
 $ make
-$ ./lc large_file
-20973777 large_file
+$ sudo make install
+$ lc some_large_file
+20973777 some_large_file
 ```
 
 ## Performance
