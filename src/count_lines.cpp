@@ -17,7 +17,7 @@ void LineCounter::count_lines_in_chunk(std::size_t chunk_start, std::size_t chun
   result += lines_in_chunk;
 }
 
-LineCounter::LineCounter(const char *path) {
+LineCounter::LineCounter(const std::string& path) {
   file_mmap = mio::make_mmap_source(path, error);
   file_size = file_mmap.size();
   num_chunks = std::thread::hardware_concurrency();
@@ -56,7 +56,7 @@ std::size_t LineCounter::count() {
 
 } // namespace detail
 
-std::size_t count_lines(const char *path) {
+std::size_t count_lines(const std::string& path) {
   auto counter = detail::LineCounter(path);
   return counter.count();
 }

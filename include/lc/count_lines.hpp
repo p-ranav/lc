@@ -1,6 +1,7 @@
 #include <atomic>
 #include <iostream>
 #include <lc/mio.hpp>
+#include <string>
 #include <thread>
 #include <unordered_map>
 
@@ -21,7 +22,7 @@ struct LineCounter {
 
   // Constructor
   // Memory map the file
-  LineCounter(const char *path);
+  LineCounter(const std::string& path);
 
   // Main function that counts the lines
   // Spawns threads (N = num_chunks)
@@ -29,6 +30,6 @@ struct LineCounter {
 };
 } // namespace detail
 
-std::size_t count_lines(const char *path);
+std::size_t count_lines(const std::string& path);
 
 } // namespace lc
