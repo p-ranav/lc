@@ -17,7 +17,7 @@ struct LineCounter {
   std::vector<std::thread> threads;
 
   // Thread function - for each chunk
-  void count_lines_in_chunk(std::size_t chunk_index, std::size_t chunk_start,
+  void count_lines_in_chunk(std::size_t chunk_start,
                             std::size_t chunk_end);
 
   // Constructor
