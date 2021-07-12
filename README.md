@@ -1,6 +1,6 @@
 # linecount
 
-This project provides a fast multi-threaded line counter. 
+`lc` is a fast multi-threaded line counter. 
 
 ## Getting Started
 
