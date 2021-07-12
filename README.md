@@ -2,7 +2,7 @@
 
 This project provides a fast multi-threaded line counter. 
 
-https://user-images.githubusercontent.com/8450091/125215000-8d0b8b00-e27f-11eb-9cf6-3fb3a2d4df74.mp4
+![lc](https://user-images.githubusercontent.com/8450091/125216038-8fbbaf80-e282-11eb-9139-07e5eabe6167.png)
 
 ## Build & Install
 
