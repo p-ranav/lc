@@ -4,13 +4,18 @@ This project provides a fast multi-threaded line counter.
 
 ![lc](https://user-images.githubusercontent.com/8450091/125216038-8fbbaf80-e282-11eb-9139-07e5eabe6167.png)
 
-## Build & Install
+## Getting Started
+
+Build and install `lc`
 
 ```console
 $ mkdir build && cd build
 $ cmake .. && make && sudo make install
+```
 
+Basic usage:
 
+```console
 $ lc some_large_file
 20973777 some_large_file
 ```
