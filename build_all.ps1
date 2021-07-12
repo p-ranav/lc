@@ -4,15 +4,15 @@ param (
 
 cmake -G "Visual Studio 16 2019" -A x64 ./
 if ($LASTEXITCODE) {
-    throw "Cannot configure vizdata for '${config}' build."
+    throw "Cannot configure lc for '${config}' build."
 }
 
 cmake --build . --config $config  -- /maxcpucount
 if ($LASTEXITCODE) {
-    throw "Cannot build vizdata using the '${config}' config."
+    throw "Cannot build lc using the '${config}' config."
 }
 
 ctest -j3
 if ($LASTEXITCODE) {
-    throw "vizdata's tests are failed for the '${config}' build."
+    throw "lc's tests are failed for the '${config}' build."
 }
