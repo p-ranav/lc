@@ -11,8 +11,3 @@ cmake --build . --config $config  -- /maxcpucount
 if ($LASTEXITCODE) {
     throw "Cannot build lc using the '${config}' config."
 }
-
-ctest -j3
-if ($LASTEXITCODE) {
-    throw "lc's tests are failed for the '${config}' build."
-}

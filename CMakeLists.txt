@@ -12,11 +12,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(ENABLE_ALL_WARNINGS OFF)
-
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
-endif()
+set(ENABLE_ALL_WARNINGS ON)
+option(CMAKE_BUILD_TYPE "Use Release build by default."  Release)
 
 add_subdirectory(src)
 
