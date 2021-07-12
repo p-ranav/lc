@@ -2,8 +2,6 @@
 
 This project provides a fast multi-threaded line counter. 
 
-![lc](https://user-images.githubusercontent.com/8450091/125216038-8fbbaf80-e282-11eb-9139-07e5eabe6167.png)
-
 ## Getting Started
 
 Build and install `lc`
