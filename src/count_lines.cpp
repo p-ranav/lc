@@ -5,8 +5,7 @@ namespace lc {
 namespace detail {
 
 // Thread function - for each chunk
-void LineCounter::count_lines_in_chunk(std::size_t chunk_start,
-                                       std::size_t chunk_end) {
+void LineCounter::count_lines_in_chunk(std::size_t chunk_start, std::size_t chunk_end) {
   std::size_t lines_in_chunk = 0;
 
   std::size_t index;
@@ -44,8 +43,8 @@ std::size_t LineCounter::count() {
       }
     }
 
-    threads.push_back(std::thread(
-        std::bind(&LineCounter::count_lines_in_chunk, this, chunk_start, chunk_end)));
+    threads.push_back(
+        std::thread(std::bind(&LineCounter::count_lines_in_chunk, this, chunk_start, chunk_end)));
   }
 
   for (auto &t : threads) {
