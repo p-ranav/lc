@@ -8,9 +8,12 @@
 
 Build and install `lc`
 
-```console
-$ mkdir build && cd build
-$ cmake .. && make && sudo make install
+```bash
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
 ```
 
 Basic usage:
