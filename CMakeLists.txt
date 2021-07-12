@@ -1,13 +1,22 @@
 cmake_minimum_required(VERSION 3.0)
 project(lc)
 
+# Use ccache to speed up our build
+find_program(CCACHE_PROGRAM ccache)
+if(CCACHE_PROGRAM)
+  set(CMAKE_CXX_COMPILER_LAUNCHER ${CCACHE_PROGRAM})
+endif()
+
+# Configure compiler options
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(ENABLE_ALL_WARNINGS OFF)
+
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
-
-set(CMAKE_CXX_FLAGS "-Wall -Wextra")
-set(CMAKE_CXX_FLAGS_DEBUG "-g")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 ###############################################################################
 ## file globbing ##############################################################
@@ -19,8 +28,7 @@ file(GLOB_RECURSE sources src/count_lines.cpp src/main.cpp)
 ###############################################################################
 
 add_executable(lc ${sources})
-target_compile_options(lc PUBLIC -std=c++17 -Wall)
-target_include_directories(lc PUBLIC include)
+target_include_directories(lc PRIVATE include)
 
 ###############################################################################
 ## dependencies ###############################################################

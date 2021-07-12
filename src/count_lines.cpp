@@ -1,3 +1,4 @@
+#include <functional>
 #include <lc/count_lines.hpp>
 
 namespace lc {

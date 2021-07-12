@@ -51,6 +51,8 @@
 #include <unistd.h>
 #endif
 
+#include <vector>
+
 namespace mio {
 
 /**
