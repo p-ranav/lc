@@ -21,7 +21,7 @@ $ lc some_large_file
 ## Performance Benchmark
 
 * This performance benchmark was run on an [NVIDIA DGX-1](https://docs.nvidia.com/dgx/dgx1-user-guide/introduction-to-dgx1.html#topic_hardware-specs) system.
-* Use `utils/make_large_file.py` to create files of desired size, filled with random data.
+* Use `utils/make_large_file.py` to create files of desired size.
 * For large files, this line counter can be 2-10 times faster than `wc -l` depending on compute resources.
 
 | File size | Lines     | `wc -l <file>` | `./lc <file>` |
