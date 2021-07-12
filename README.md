@@ -1,4 +1,6 @@
-# linecount
+<p align="center">
+  <img height="100" src="https://user-images.githubusercontent.com/8450091/125217019-50429280-e285-11eb-9bee-ecc72b949c03.png"/>  
+</p>
 
 `lc` is a fast multi-threaded line counter. 
 
