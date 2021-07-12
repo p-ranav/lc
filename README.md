@@ -2,10 +2,7 @@
 
 This project provides a fast multi-threaded line counter. 
 
-```console
-$ lc large_file.csv
-20973777 large_file.csv
-```
+https://user-images.githubusercontent.com/8450091/125215000-8d0b8b00-e27f-11eb-9cf6-3fb3a2d4df74.mp4
 
 ## Build & Install
 
