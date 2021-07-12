@@ -19,8 +19,8 @@ sudo make install
 Basic usage:
 
 ```console
-$ lc some_large_file
-20973777 some_large_file
+$ lc some_large_file.csv
+20973777 some_large_file.csv
 ```
 
 ## Performance Benchmark
