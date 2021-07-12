@@ -30,7 +30,7 @@ $ lc some_large_file.csv
 * Benchmark using the [hyperfine](https://github.com/sharkdp/hyperfine) command-line benchmarking tool.
 * For large files, this line counter can be 2-10 times faster than `wc -l` depending on compute resources.
 
-| File size | Lines     | `wc -l <file>` | `./lc <file>` |
+| File size | Lines     | `wc -l <file>` | `lc <file>`   |
 |----------:|----------:|---------------:|--------------:|
 | 500 MB    | 2047277   | 116.8 ms       | 34.5 ms       |
 | 1 GB      | 4192675   | 243.0 ms       | 60.9 ms       |
