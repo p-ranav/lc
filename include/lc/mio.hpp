@@ -51,6 +51,8 @@
 #include <unistd.h>
 #endif
 
+#include <vector>
+
 namespace mio {
 
 /**
@@ -699,7 +701,7 @@ inline DWORD int64_high(int64_t n) noexcept { return n >> 32; }
 /** Returns the 4 lower bytes of an 8-byte integer. */
 inline DWORD int64_low(int64_t n) noexcept { return n & 0xffffffff; }
 
-std::wstring s_2_ws(const std::string &s) {
+inline std::wstring s_2_ws(const std::string &s) {
   if (s.empty())
     return {};
   const auto s_length = static_cast<int>(s.length());
